@@ -13,6 +13,9 @@ KOJI_URL="" # Kojihub URL
 KOJI_TOPURL="" # Koji Top url (kojifiles)
 BUNDLES_REPO="" # Git repository Hosting the bundles definitions for this Downstream
 
+PUBLISHING_HOST="" # The hostname of the server to which Downstream artifacts will be published
+PUBLISHING_ROOT="/srv/pub" # The directory on the server where Downstream artifacts will be published
+
 # Workspace config
 BUILD_DIR="/srv/work/${NAMESPACE:-${DSTREAM_NAME}}" # Folder inside the Builder that should be used to run the release process
 STAGING_DIR="/srv/pub/${NAMESPACE:-${DSTREAM_NAME}}" # Folder inside the Builder that should be used to stage the produced artifacts
