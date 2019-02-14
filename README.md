@@ -7,3 +7,6 @@ To find out more about this project and how to use it, please refer to Clear Lin
 
  # Have a Security Issue?
  Please go to https://01.org/security to report any security issues or concerns.
+ 
+ ---
+ *Other names and brands may be claimed as the property of others.
