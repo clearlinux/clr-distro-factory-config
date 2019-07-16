@@ -1,0 +1,33 @@
+targetMedia:
+- name: ${native}
+  size: "0"
+  ro: "false"
+  rm: "false"
+  type: loop
+  children:
+  - name: ${native}1
+    fstype: vfat
+    mountpoint: /boot
+    size: "536870912"
+    ro: "false"
+    rm: "false"
+    type: part
+  - name: ${native}2
+    fstype: swap
+    size: "536870912"
+    ro: "false"
+    rm: "false"
+    type: part
+  - name: ${native}3
+    fstype: ext4
+    mountpoint: /
+    size: "7516192768"
+    ro: "false"
+    rm: "false"
+    type: part
+keyboard: us
+language: en_US.UTF-8
+bundles: [bootloader, os-core, os-core-update]
+telemetry: false
+kernel: kernel-native
+block-devices: [{name: native, file: native.img}]
