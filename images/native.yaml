@@ -27,7 +27,10 @@ targetMedia:
     type: part
 keyboard: us
 language: en_US.UTF-8
-bundles: [bootloader, os-core, os-core-update]
+iso: true
+keepImage: true
 telemetry: false
+bundles: [bootloader, os-core, os-core-update]
 kernel: kernel-native
 block-devices: [{name: native, file: native.img}]
+post-install: [{cmd: "${yamlDir}/native-post.sh ${chrootDir}"}]
